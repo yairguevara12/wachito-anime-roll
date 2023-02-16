@@ -3,26 +3,27 @@
 }
 .cardsBar {
   width: 100%;
-
+  min-width: 300px;
   overflow-x: scroll;
- 
-  gap: 30px;
+  height: 100%;
+  gap: 20px;
 }
 .card-anime {
   /* width:  100% ;
     height: 200px; */
-  width: 100%;
+  width: 30%;
 
   background-color: bisque;
 }
 .card-anime > img {
 
   height: 70%;
-  
+  min-width: 100px;
+  min-height: 150px;
 }
 .card-anime > p {
     height: 20%;
-   font-size: 1.3rem ; 
+   font-size: 1.2rem ; 
    font-weight: 400;
    text-align: center;
 }

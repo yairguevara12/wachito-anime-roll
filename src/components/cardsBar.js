@@ -7,24 +7,26 @@ import "../style/home.css";
 function CardsBar(props) {
 
     const autoScroll = React.useRef(null);
+    const [firstBardScroll, setFirstBardScroll] = React.useState(window.innerWidth);
 
     function autoScrollStart() {
-        
-        if (autoScroll.current) {
-            
-            const flavoursScrollWidth = autoScroll.current.scrollWidth;
-            //  console.log(autoScroll.current.);  
-           /*  window.addEventListener('load', () => {
-                console.log(flavoursScrollWidth);
-                  window.setInterval(() => {
-                     if (autoScroll .scrollLeft !== flavoursScrollWidth ) {
-                         autoScroll.scrollTo(autoScroll.scrollLeft + 1, 0);
-                     }
-                   }, 15); 
-            }); */
-        }
+
+        /*   console.log(autoScroll.current.scrollWidth);
+          console.log(window.innerWidth); */
+        setFirstBardScroll((prev) => {
+            if(prev !== 0){
+                return   prev + window.innerWidth
+            }else{
+                return window.innerWidth;
+            }
+        });
+      //  console.log(firstBardScroll);
+        console.log(autoScroll.current.scrollWidth - firstBardScroll);
+/*             autoScroll.current.scrollLeft = autoScroll.current.scrollWidth;
+ */            autoScroll.current.scrollLeft = firstBardScroll;
+
     }
-    
+
     const [dataApi, requestData] = UseApi({
         query: `
         query ($page: Int, $perPage: Int) { 
@@ -86,7 +88,8 @@ function CardsBar(props) {
 
     React.useEffect(() => {
         requestData();
-        autoScrollStart();
+        //  autoScrollStart();
+
     }, []);
 
     // requestData();
@@ -100,9 +103,13 @@ function CardsBar(props) {
 
 
     return (
-        <div ref={autoScroll} className="flex cardsBar medium-padding">
-            {cards}
-        </div>
+        <>
+            <div ref={autoScroll} className="flex cardsBar medium-padding">
+                {cards}
+
+            </div>
+            <button onClick={autoScrollStart}>TEST</button>
+        </>
     )
 }
 
