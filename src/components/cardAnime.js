@@ -1,11 +1,12 @@
 import React from "react";
+import "../style/home.css";
+import "../style/util.css";
+function CardAnime(props) {
 
-function CardAnime(props){
-    
-    
-    
-    return(
-        <div>
+
+
+    return (
+        <div className="card-anime flex flex-direction-column">
             <img src={props.img} alt={props.title}></img>
             <p >{props.title}</p>
             <div>
@@ -16,4 +17,4 @@ function CardAnime(props){
     )
 }
 
-export default CardAnime ;
+export default CardAnime;
