@@ -1,0 +1,74 @@
+.menu-body {
+  background-color: rgb(20, 21, 25);
+  color: azure;
+  /* height: 100vh;
+    width: 100vh; */
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  overflow: auto;
+  font-size: 1rem;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  margin: 1.8rem 1rem;
+  cursor: pointer;
+}
+.menu-icon {
+  object-fit: cover;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-genners {
+  padding: 0 1em;
+  background-color: rgb(47, 49, 56);
+  padding-top: 0.2em;
+  padding-bottom:0.2em ;
+}
+
+.logo-icon {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  align-content: center;
+}
+.lupa-icon {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+}
+.user-icon {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+}
+.header {
+  height: 100%;
+}
+.menu-icon-body {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.menu-explorar{
+    font-size: 0.8rem;
+    color: rgb(151, 160, 160);
+    font-weight: 400;
+
+}
+.menu-manga{
+    border-top: 0.5px solid rgb(81, 80, 80);
+}
+.up-down-arrow{
+    width: 18px;
+    height: 18px;
+}
+.bar_menu{
+  width: 100%;
+  min-width : 300px ;
+}

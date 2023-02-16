@@ -1,0 +1,57 @@
+#carouselExampleIndicators {
+  width: 100%;
+  min-width: 300px;
+  height: 620px;
+  background-color: rgb(0, 0, 0);
+}
+.carousel-item {
+  height: 100%;
+}
+
+/* .carousel-item-new{
+    display: flex;
+
+} */
+/* .carousel-item-container{
+    width: 100%;
+    height: 80%;
+}
+ */
+.carousel-container-img {
+  width: 100%;
+  height: 100%;
+  height: 400px;
+  background-color: inherit;
+}
+.carousel-img {
+  width: 250px;
+  height: 90%;
+  margin-top: 2em;
+}
+.carousel-item-name {
+  width: 100%;
+}
+.carousel-item-name > p {
+  color: #000000;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.carousel-item-button {
+  font-size: 1.4rem;
+  width: 100%;
+}
+.carousel-item-button > a {
+    color: aliceblue;
+    background-color: rgb(32, 29, 29);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+.carousel-control-next .carousel-control-next-icon {
+    background-image: url("../img/right-arrow.png");
+}
+.carousel-control-prev .carousel-control-prev-icon {
+    background-image: url("../img/left-arrow.png");
+
+}

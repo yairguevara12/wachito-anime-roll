@@ -1,0 +1,45 @@
+.flex{
+    display: flex;
+    
+}
+.flex-direction{
+    flex-direction: row;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.flex-align-center{
+   align-items: center;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.flex-justify-center{
+    justify-content: center;
+}
+.flex-gap{
+    gap: 1.5rem;
+}
+.grid{
+    display: grid;
+}
+.flex-column{
+    flex-direction: column;
+}
+.normal-margin{
+    margin: 0.5em 1em;
+}
+.medium-padding{
+    padding: 0.3em 1em;
+}
+.normal-padding{
+    padding: 0.5em 1em;
+}
+.extra-padding{
+    padding: 2em 0.1em;
+}
+.basic-background-color{
+
+        background-color: rgb(35, 37, 43);   
+    
+}
