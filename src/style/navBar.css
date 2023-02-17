@@ -55,3 +55,9 @@
     background-image: url("../img/left-arrow.png");
 
 }
+#carouselExampleIndicators .carousel-control-next{
+  height: 85%;
+}
+#carouselExampleIndicators .carousel-control-prev{
+  height: 85%;
+}

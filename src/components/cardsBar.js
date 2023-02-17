@@ -6,26 +6,77 @@ import "../style/util.css";
 import "../style/home.css";
 function CardsBar(props) {
 
-    const autoScroll = React.useRef(null);
-    const [firstBardScroll, setFirstBardScroll] = React.useState(window.innerWidth);
+    const cardBarElement = React.useRef(null);
+    const [firstBardScroll, setFirstBardScroll] = React.useState(0);
 
-    function autoScrollStart() {
+    function cardBarToRight() {
 
-        /*   console.log(autoScroll.current.scrollWidth);
+        /*   console.log(cardBarElement.current.scrollWidth);
           console.log(window.innerWidth); */
+        const cardWidth = cardBarElement.current.querySelector(".card-anime").scrollWidth;
+        // console.log(firstBardScroll);
+
+
+        const cardTotal = cardBarElement.current.querySelectorAll(".card-anime");
+        cardBarElement.current.scrollLeft = firstBardScroll;
         setFirstBardScroll((prev) => {
-            if(prev !== 0){
-                return   prev + window.innerWidth
-            }else{
-                return window.innerWidth;
+            // cardBarElement.current.scrollLeft = prev;
+
+            //const cardBarWidth = cardTotal.length * (cardWidth + 20) ;
+            /*  if (cardBarWidth > prev) { */
+            const ignoreNumber = Math.round((window.innerWidth / cardWidth));
+            const cardBarWidth = (cardTotal.length - ignoreNumber) * (cardWidth + 20);
+           
+            if (cardBarWidth > prev) {
+                return prev + (cardWidth + 20);
+            } else {
+                return prev;
             }
+            /*   } else {
+                  return prev;
+              }
+   */
+
         });
-      //  console.log(firstBardScroll);
-        console.log(autoScroll.current.scrollWidth - firstBardScroll);
-/*             autoScroll.current.scrollLeft = autoScroll.current.scrollWidth;
- */            autoScroll.current.scrollLeft = firstBardScroll;
+
+        //  console.log(firstBardScroll);
+        //console.log(cardBarElement.current.scrollWidth - firstBardScroll);
+        //  console.log(cardBarElement.current.querySelector(".card-anime").scrollWidth);
+        /*             cardBarElement.current.scrollLeft = cardBarElement.current.scrollWidth;
+         */
+        // console.log("total->" + (cardBarWidth.length * ));
+        //const cardBarWidth = cardTotal.length * (cardWidth);
+        console.log("ga->" + Math.round((window.innerWidth / cardWidth)));
+        console.log("right->" + firstBardScroll);
+    }
+
+
+    function cardBarToLeft() {
+
+        /*   console.log(cardBarElement.current.scrollWidth);
+          console.log(window.innerWidth); */
+        const cardWidth = cardBarElement.current.querySelector(".card-anime").scrollWidth;
+     
+        // console.log("Left->" + firstBardScroll);
+        // console.log("Left->" + (firstBardScroll - (cardWidth + 20)));
+        cardBarElement.current.scrollLeft = (firstBardScroll - 230);
+        console.log((firstBardScroll - 230));
+        setFirstBardScroll((prev) => {
+            // cardBarElement.current.scrollLeft = prev;
+            return (prev - ((cardWidth) + 20));
+
+        });
+        //  console.log(firstBardScroll);
+        //console.log(cardBarElement.current.scrollWidth - firstBardScroll);
+        //  console.log(cardBarElement.current.querySelector(".card-anime").scrollWidth);
+        /*             cardBarElement.current.scrollLeft = cardBarElement.current.scrollWidth;
+         */
+
 
     }
+
+
+
 
     const [dataApi, requestData] = UseApi({
         query: `
@@ -88,8 +139,15 @@ function CardsBar(props) {
 
     React.useEffect(() => {
         requestData();
-        //  autoScrollStart();
+        ///  setFirstBardScroll(cardBarElement.current.querySelector(".card-anime").scrollWidth + 16);
+        //  cardBarToRight();
+        //  console.log(cardBarElement.current.querySelector(".card-anime"));
 
+        //console.log(cardBarElement.current.querySelector(".card-anime").scrollWidth);
+        setTimeout(() => {
+            setFirstBardScroll(cardBarElement.current.querySelector(".card-anime").scrollWidth);
+        }
+            , 2000)
     }, []);
 
     // requestData();
@@ -104,11 +162,13 @@ function CardsBar(props) {
 
     return (
         <>
-            <div ref={autoScroll} className="flex cardsBar medium-padding">
+            <div ref={cardBarElement} className="flex cardsBar ">
                 {cards}
 
             </div>
-            <button onClick={autoScrollStart}>TEST</button>
+            <button onClick={cardBarToRight}>right</button>
+            <button onClick={cardBarToLeft}>left</button>
+
         </>
     )
 }
