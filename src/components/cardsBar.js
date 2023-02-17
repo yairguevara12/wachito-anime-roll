@@ -1,81 +1,78 @@
 import React from "react";
 import UseApi from "../util/useApi";
 import CardAnime from "./cardAnime";
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "../style/util.css";
 import "../style/home.css";
 function CardsBar(props) {
 
-    const cardBarElement = React.useRef(null);
-    const [firstBardScroll, setFirstBardScroll] = React.useState(0);
+    /*     const cardBarElement = React.useRef(null);
+        const [firstBardScroll, setFirstBardScroll] = React.useState(0); */
 
-    function cardBarToRight() {
+    /*  function cardBarToRight() {
+ 
+ 
+         const cardWidth = cardBarElement.current.querySelector(".card-anime").scrollWidth;
+ 
+ 
+ 
+         const cardTotal = cardBarElement.current.querySelectorAll(".card-anime");
+         cardBarElement.current.scrollLeft = firstBardScroll;
+         setFirstBardScroll((prev) => {
+ 
+             const ignoreNumber = Math.round((window.innerWidth / cardWidth));
+             const cardBarWidth = (cardTotal.length - ignoreNumber) * (cardWidth + 20);
+ 
+             if (cardBarWidth > prev) {
+                 return prev + (cardWidth + 20);
+             } else {
+                 return prev;
+             }
+ 
+ 
+         });
+ 
+ 
+         console.log("ga->" + Math.round((window.innerWidth / cardWidth)));
+         console.log("right->" + firstBardScroll);
+     }
+ 
+ 
+     function cardBarToLeft() {
+ 
+ 
+         const cardWidth = cardBarElement.current.querySelector(".card-anime").scrollWidth;
+ 
+ 
+         cardBarElement.current.scrollLeft = (firstBardScroll - 230);
+         console.log((firstBardScroll - 230));
+         setFirstBardScroll((prev) => {
+             return (prev - ((cardWidth) + 20));
+ 
+         });
+ 
+ 
+ 
+     } */
 
-        /*   console.log(cardBarElement.current.scrollWidth);
-          console.log(window.innerWidth); */
-        const cardWidth = cardBarElement.current.querySelector(".card-anime").scrollWidth;
-        // console.log(firstBardScroll);
-
-
-        const cardTotal = cardBarElement.current.querySelectorAll(".card-anime");
-        cardBarElement.current.scrollLeft = firstBardScroll;
-        setFirstBardScroll((prev) => {
-            // cardBarElement.current.scrollLeft = prev;
-
-            //const cardBarWidth = cardTotal.length * (cardWidth + 20) ;
-            /*  if (cardBarWidth > prev) { */
-            const ignoreNumber = Math.round((window.innerWidth / cardWidth));
-            const cardBarWidth = (cardTotal.length - ignoreNumber) * (cardWidth + 20);
-           
-            if (cardBarWidth > prev) {
-                return prev + (cardWidth + 20);
-            } else {
-                return prev;
-            }
-            /*   } else {
-                  return prev;
-              }
-   */
-
-        });
-
-        //  console.log(firstBardScroll);
-        //console.log(cardBarElement.current.scrollWidth - firstBardScroll);
-        //  console.log(cardBarElement.current.querySelector(".card-anime").scrollWidth);
-        /*             cardBarElement.current.scrollLeft = cardBarElement.current.scrollWidth;
-         */
-        // console.log("total->" + (cardBarWidth.length * ));
-        //const cardBarWidth = cardTotal.length * (cardWidth);
-        console.log("ga->" + Math.round((window.innerWidth / cardWidth)));
-        console.log("right->" + firstBardScroll);
-    }
-
-
-    function cardBarToLeft() {
-
-        /*   console.log(cardBarElement.current.scrollWidth);
-          console.log(window.innerWidth); */
-        const cardWidth = cardBarElement.current.querySelector(".card-anime").scrollWidth;
-     
-        // console.log("Left->" + firstBardScroll);
-        // console.log("Left->" + (firstBardScroll - (cardWidth + 20)));
-        cardBarElement.current.scrollLeft = (firstBardScroll - 230);
-        console.log((firstBardScroll - 230));
-        setFirstBardScroll((prev) => {
-            // cardBarElement.current.scrollLeft = prev;
-            return (prev - ((cardWidth) + 20));
-
-        });
-        //  console.log(firstBardScroll);
-        //console.log(cardBarElement.current.scrollWidth - firstBardScroll);
-        //  console.log(cardBarElement.current.querySelector(".card-anime").scrollWidth);
-        /*             cardBarElement.current.scrollLeft = cardBarElement.current.scrollWidth;
-         */
-
-
-    }
-
-
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3,
+            slidesToSlide: 3 // optional, default to 1.
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2,
+            slidesToSlide: 2 // optional, default to 1.
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 2,
+            slidesToSlide: 2 // optional, default to 1.
+        }
+    };
 
 
     const [dataApi, requestData] = UseApi({
@@ -139,18 +136,14 @@ function CardsBar(props) {
 
     React.useEffect(() => {
         requestData();
-        ///  setFirstBardScroll(cardBarElement.current.querySelector(".card-anime").scrollWidth + 16);
-        //  cardBarToRight();
-        //  console.log(cardBarElement.current.querySelector(".card-anime"));
 
-        //console.log(cardBarElement.current.querySelector(".card-anime").scrollWidth);
-        setTimeout(() => {
-            setFirstBardScroll(cardBarElement.current.querySelector(".card-anime").scrollWidth);
-        }
-            , 2000)
+        /*  setTimeout(() => {
+             setFirstBardScroll(cardBarElement.current.querySelector(".card-anime").scrollWidth);
+         }
+             , 2000) */
     }, []);
 
-    // requestData();
+
 
     const cards = dataApi.data.Page.media.map((item, index) => {
         const titleAnime = () => {
@@ -162,12 +155,41 @@ function CardsBar(props) {
 
     return (
         <>
-            <div ref={cardBarElement} className="flex cardsBar ">
+            <Carousel
+               additionalTransfrom={0}
+               arrows
+               autoPlaySpeed={3000}
+               centerMode={false}
+               partialVisible={true}
+               className=""
+               containerClass="container-with-dots"
+               dotListClass=""
+               draggable
+               focusOnSelect={false}
+               infinite
+               itemClass=""
+               keyBoardControl
+               minimumTouchDrag={80}
+               pauseOnHover
+               renderArrowsWhenDisabled={false}
+               renderButtonGroupOutside={false}
+               renderDotsOutside={false}
+               rewind={false}
+               rewindWithAnimation={false}
+               rtl={false}
+               shouldResetAutoplay
+               showDots={false}
+               sliderClass=""
+               slidesToSlide={1}
+               swipeable
+               responsive={responsive}
+               removeArrowOnDeviceType={["tablet", "mobile"]}
+
+            >
                 {cards}
 
-            </div>
-            <button onClick={cardBarToRight}>right</button>
-            <button onClick={cardBarToLeft}>left</button>
+            </Carousel>;
+
 
         </>
     )
