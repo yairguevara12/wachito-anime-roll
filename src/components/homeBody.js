@@ -108,6 +108,7 @@ function HomeBody() {
             }
          </MainNavbar>
 
+         
          <CardsBar></CardsBar>
       </div>
    )

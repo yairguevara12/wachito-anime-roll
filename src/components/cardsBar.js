@@ -69,8 +69,8 @@ function CardsBar(props) {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
+            items: 2
+            , slidesToSlide: 1 // optional, default to 1.
         }
     };
 
@@ -155,35 +155,39 @@ function CardsBar(props) {
 
     return (
         <>
+            <div className="cardsBar-Title normal-padding">
+                <h3>!Míralos gratis en febrero!</h3>
+                <p>!Enamórate con un nuevo anime este mes!</p>
+            </div>
             <Carousel
-               additionalTransfrom={0}
-               arrows
-               autoPlaySpeed={3000}
-               centerMode={false}
-               partialVisible={true}
-               className=""
-               containerClass="container-with-dots"
-               dotListClass=""
-               draggable
-               focusOnSelect={false}
-               infinite
-               itemClass=""
-               keyBoardControl
-               minimumTouchDrag={80}
-               pauseOnHover
-               renderArrowsWhenDisabled={false}
-               renderButtonGroupOutside={false}
-               renderDotsOutside={false}
-               rewind={false}
-               rewindWithAnimation={false}
-               rtl={false}
-               shouldResetAutoplay
-               showDots={false}
-               sliderClass=""
-               slidesToSlide={1}
-               swipeable
-               responsive={responsive}
-               removeArrowOnDeviceType={["tablet", "mobile"]}
+                additionalTransfrom={0}
+                arrows
+                autoPlaySpeed={3000}
+                centerMode={false}
+                partialVisible={false}
+                className=""
+                containerClass="container-with-dots"
+                dotListClass=""
+                //draggable
+                focusOnSelect={false}
+                infinite
+                itemClass=""
+                keyBoardControl
+                minimumTouchDrag={80}
+                pauseOnHover
+                renderArrowsWhenDisabled={false}
+                renderButtonGroupOutside={false}
+                renderDotsOutside={false}
+                rewind={false}
+                rewindWithAnimation={false}
+                rtl={false}
+                shouldResetAutoplay
+                showDots={false}
+                sliderClass=""
+                slidesToSlide={1}
+                swipeable
+                responsive={responsive}
+                removeArrowOnDeviceType={["tablet", "mobile"]}
 
             >
                 {cards}

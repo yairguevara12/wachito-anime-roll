@@ -4,8 +4,8 @@
   /* height: 100vh;
     width: 100vh; */
   width: 100%;
-  height: 100%;
-  font-family: "Inter", sans-serif;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
   overflow: auto;
   font-size: 1rem;
 }

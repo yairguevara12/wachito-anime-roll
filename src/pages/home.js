@@ -18,7 +18,7 @@ export default function Home(){
            
         <Header isShownMenu={isShownMenu} handleSetIsShownMenu={handleSetIsShownMenu} />
 
-        {isShownMenu && <Menu />}
+        {isShownMenu && <Menu /> }
 
         <HomeBody></HomeBody>
 

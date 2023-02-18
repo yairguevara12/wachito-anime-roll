@@ -2,6 +2,7 @@
   height: auto;
   width: 100%;
   background-color: rgb(0, 0, 0);
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .card-anime {
@@ -13,8 +14,8 @@
 }
 .card-anime-img {
 
-  max-height: 80vw;
-  min-height: 80vw;
+  max-height: 70vw;
+  min-height: 70vw;
   /* max-width: 50vw;
   min-width: 50vw; */
   max-width: 100%;
@@ -30,5 +31,34 @@
   height: 100%;
 }
 .react-multi-carousel-list .react-multi-carousel-item {
-  margin: 28px 2px; 
+  margin: 0.5em 0.1em; 
 }
+.react-multi-carousel-list .react-multi-carousel-item .card-anime {
+  padding: 0 0.1em; 
+}
+.cardsBar-Title{
+  color: aliceblue;
+  margin-top: 2rem;
+}
+.cardsBar-Title >h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.cardsBar-Title > p {
+  font-size: 0.9rem;
+  margin-bottom: 0.2em ;
+  margin-top: 0;
+  padding-bottom: 1em;
+  padding-top: 0;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  
+  border-image-source:linear-gradient(90deg, rgba(63,247,241,1) 7%, rgba(113,221,224,1) 29%, rgba(35,32,82,1) 100%);
+}
+;

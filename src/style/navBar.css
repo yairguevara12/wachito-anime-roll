@@ -3,6 +3,7 @@
   min-width: 300px;
   height: 620px;
   background-color: rgb(0, 0, 0);
+  font-family: 'Ubuntu', sans-serif;
 }
 .carousel-item {
   height: 100%;
