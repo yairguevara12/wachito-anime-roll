@@ -4,6 +4,7 @@ import UseApi from "../util/useApi";
 import CardsBar from "./cardsBar";
 import "../style/navBar.css";
 import "../style/util.css";
+import AnimeAdver from "./animeAdver";
 function HomeBody() {
 
    // const [dataHero, setDataHero] = React.useState();
@@ -110,6 +111,7 @@ function HomeBody() {
 
          
          <CardsBar></CardsBar>
+         <AnimeAdver></AnimeAdver>
       </div>
    )
 }
