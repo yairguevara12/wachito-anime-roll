@@ -15,7 +15,6 @@ export default function Home() {
     }
 
     React.useEffect(() => {
-        console.log(isShownMenu);
 
         isShownMenu ? lockWindow.current.parentElement.parentElement.style.overflow = 'hidden'
             : lockWindow.current.parentElement.parentElement.style.overflow = 'auto';

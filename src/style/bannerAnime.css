@@ -1,0 +1,25 @@
+.banner-anime{
+    position: relative;
+}
+.banner-anime > img{
+    width: 100%;
+    height: 6.5em;
+}
+.banner-anime > div{
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+.banner-anime > div > button{
+   
+    left: 40%;
+    
+    bottom: 5px;
+    right: 0;
+    
+    width: 25%;
+    height: 30%;
+    border: 0;
+    background-color: #000000;
+    color: aliceblue;
+    font-weight: 400;
+}

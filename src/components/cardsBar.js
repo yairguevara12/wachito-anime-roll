@@ -86,7 +86,7 @@ function CardsBar(props) {
             }
             
            
-                          media(genre: "Sci-Fi" ){
+                          media(genre: "${props.genre}" ){
                   title {         
                     english
                     userPreferred
@@ -105,7 +105,7 @@ function CardsBar(props) {
         `
         ,
         variables: {
-            page: 1,
+            page: props.page,
             perPage: 12
         },
         default: {
@@ -155,10 +155,7 @@ function CardsBar(props) {
 
     return (
         <>
-            <div className="cardsBar-Title normal-padding">
-                <h3>!Míralos gratis en febrero!</h3>
-                <p>!Enamórate con un nuevo anime este mes!</p>
-            </div>
+           {props.children}
             <Carousel
                 additionalTransfrom={0}
                 arrows
@@ -192,7 +189,7 @@ function CardsBar(props) {
             >
                 {cards}
 
-            </Carousel>;
+            </Carousel>
 
 
         </>

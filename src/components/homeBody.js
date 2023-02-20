@@ -6,6 +6,9 @@ import "../style/navBar.css";
 import "../style/util.css";
 import AnimeAdver from "./animeAdver";
 import goku from "../img/goku-background.png";
+import myHeroAcademy from "../img/my-hero-acedemy.png";
+import BannerAnime from "./bannerAnime";
+import chainsawMan from "../img/chain-saw-man.png";
 function HomeBody() {
 
    // const [dataHero, setDataHero] = React.useState();
@@ -109,15 +112,73 @@ function HomeBody() {
    });
    return (
       <div>
-        {/*  <MainNavbar>
+         <MainNavbar>
             {
                navbar
             }
          </MainNavbar>
 
+         <CardsBar genre='Sci-fi' page={1}>
+            <div className="cardsBar-Title normal-padding">
+               <h3>!Míralos gratis en febrero!</h3>
+               <p>!Enamórate con un nuevo anime este mes!</p>
+            </div>
+         </CardsBar>
+         <AnimeAdver idAnime={813} character={goku}></AnimeAdver>
+         <br></br>
+         <BannerAnime idAnime={1}></BannerAnime>
+         <br></br>
+         <AnimeAdver idAnime={21459} character={myHeroAcademy}></AnimeAdver>
+         <br></br>
+         <CardsBar genre='romance' page={2}>
+            <div className="cardsBar-Title normal-padding">
+               <h3>!Los mejores Romances!</h3>
+               <p>!Llora y disfruta del amor de primavera!</p>
+            </div>
+         </CardsBar>
+         <BannerAnime idAnime={20954}></BannerAnime>
 
-         <CardsBar></CardsBar> */}
-         <AnimeAdver idAnime={813} goku={goku}></AnimeAdver>
+
+         <CardsBar genre='Action' page={3}>
+            <div className="cardsBar-Title normal-padding">
+               <h3>!Accion explosiva!</h3>
+               <p>!recarga y dispara!</p>
+            </div>
+         </CardsBar>
+
+
+         <CardsBar genre='Psychological' page={1}>
+            <div className="cardsBar-Title normal-padding">
+               <h3>!Juegos Mentales!</h3>
+               <p>!nunca se sabe como terminara!</p>
+            </div>
+         </CardsBar>
+         <AnimeAdver idAnime={127230} character={chainsawMan}></AnimeAdver>
+         <br></br>
+         <br></br>
+         <BannerAnime idAnime={20807}></BannerAnime>
+         <br></br>
+         <br></br>
+         <CardsBar genre='Drama' page={1}>
+            <div className="cardsBar-Title normal-padding">
+               <h3>!La controversia del amor!</h3>
+               <p>!Amorrrrr....!</p>
+            </div>
+         </CardsBar>
+
+         <CardsBar genre='Fantasy' page={1}>
+            <div className="cardsBar-Title normal-padding">
+               <h3>!Morir y Rencarnar!</h3>
+               <p>!Veremos que les espera en su segunda vida!</p>
+            </div>
+         </CardsBar>
+            <br>
+            </br>
+            <BannerAnime idAnime={16498}></BannerAnime>
+            <br>
+            </br>
+            <br>
+            </br>
       </div>
    )
 }

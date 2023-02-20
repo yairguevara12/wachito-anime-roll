@@ -73,12 +73,21 @@ export default function AnimeAdver(props) {
 
     }, [])
     const objAnime = dataApi.data.Page.media[0];
-    console.log(objAnime.description.length);
+
+    function shorterDescription(description){
+        let finalDescription = "";
+        if(objAnime.description.length > 200){
+            finalDescription = objAnime.description.slice(0,200) + "...";
+        }else{
+            finalDescription = description ;
+        }
+        return finalDescription ;
+    }
     return (
         <>
             <div className="animeAdver-body flex flex-direction-column ">
                 <div className="flex flex-between anime-pictures normal-padding">
-                    <img alt="anime" src={props.goku} className="anime-character"></img>
+                    <img alt="anime" src={props.character} className="anime-character"></img>
                     <img alt="anime" src={objAnime.coverImage.large} className="anime-cover"></img>
                 </div>
                 <div className="flex flex-direction-column normal-padding">
@@ -87,7 +96,13 @@ export default function AnimeAdver(props) {
                         <p>{objAnime.format}</p>
                     </div>
                     <div className="flex">
-                        <p>{objAnime.description}</p>
+                        <p>{
+                        
+                        shorterDescription(objAnime.description)
+                        
+                        
+                        
+                        }</p>
                     </div>
                     <div>
                         <button className="animeAdver-button flex flex-align-center flex-justify-center">
