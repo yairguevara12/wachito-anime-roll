@@ -1,3 +1,55 @@
-.animeAdver-body{
-    background-color: antiquewhite;
+.animeAdver-body {
+  color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  position: relative;
+}
+.anime-pictures {
+  width: 100%;
+  background-color: antiquewhite;
+  background: rgb(13, 12, 12);
+  background: linear-gradient(
+    0deg,
+    rgba(13, 12, 12, 1) 9%,
+    rgba(170, 51, 24, 1) 62%,
+    rgba(229, 103, 31, 1) 77%,
+    rgba(0, 0, 0, 1) 77%
+  );
+}
+.anime-character {
+  max-height: 60vw;
+  min-height: 60vw;
+
+  max-width: 40%;
+  min-width: 40%;
+}
+.anime-cover {
+  max-height: 60vw;
+  min-height: 60vw;
+
+  max-width: 40%;
+  min-width: 40%;
+}
+.anime-title{
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
+}
+.anime-format > p{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+   
+}
+.animeAdver-button{
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: 0;
+    background-color: #f47521;
+    font-weight: 600;
+}
+.play-icon{
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
 }

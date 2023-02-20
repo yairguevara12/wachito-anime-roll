@@ -5,9 +5,15 @@ import CardsBar from "./cardsBar";
 import "../style/navBar.css";
 import "../style/util.css";
 import AnimeAdver from "./animeAdver";
+import goku from "../img/goku-background.png";
 function HomeBody() {
 
    // const [dataHero, setDataHero] = React.useState();
+
+
+
+
+
 
    const [dataApi, requestData] = UseApi({
       query: `
@@ -103,15 +109,15 @@ function HomeBody() {
    });
    return (
       <div>
-         <MainNavbar>
+        {/*  <MainNavbar>
             {
                navbar
             }
          </MainNavbar>
 
-         
-         <CardsBar></CardsBar>
-         <AnimeAdver></AnimeAdver>
+
+         <CardsBar></CardsBar> */}
+         <AnimeAdver idAnime={813} goku={goku}></AnimeAdver>
       </div>
    )
 }

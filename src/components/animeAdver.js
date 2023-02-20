@@ -1,25 +1,98 @@
 import React from "react";
 import "../style/util.css";
 import "../style/animeAdver.css";
-export default function AnimeAdver() {
+import UseApi from "../util/useApi";
+import playIcon from "../img/boton-de-play.png";
+
+export default function AnimeAdver(props) {
+
+
+    const [dataApi, requestData] = UseApi({
+        query: `
+    query ($page: Int, $perPage: Int , $id: Int) { 
+       Page(page: $page, perPage: $perPage) {
+          pageInfo{
+             total
+             perPage
+          }
+          media(id : $id){
+            id,
+            type ,
+            format 
+              
+               title{
+              native,
+              english
+            }
+            description,
+              coverImage {
+                extraLarge
+                large
+                medium
+                color
+              }
+            
+             }
+         
+          
+        }
+    }
+    `
+        ,
+        variables: {
+            page: 1,
+            perPage: 1,
+            id: props.idAnime
+        }
+        ,
+        default: {
+            data: {
+                Page: {
+                    media: [
+                        {
+                            coverImage: {
+                                color: "",
+                                extraLarge: "",
+                                large: "",
+                                medium: ""
+                            },
+                            description: "",
+                            format: "",
+                            id: 0,
+                            title: "",
+                            type: ""
+                        }
+                    ]
+                }
+            }
+        }
+    });
+
+    React.useEffect(() => {
+        requestData();
+
+    }, [])
+    const objAnime = dataApi.data.Page.media[0];
+    console.log(objAnime.description.length);
     return (
         <>
-            <div className="animeAdver-body">
-                <div>
-                    <img alt="anime"></img>
-                    <img alt="anime"></img>
+            <div className="animeAdver-body flex flex-direction-column ">
+                <div className="flex flex-between anime-pictures normal-padding">
+                    <img alt="anime" src={props.goku} className="anime-character"></img>
+                    <img alt="anime" src={objAnime.coverImage.large} className="anime-cover"></img>
                 </div>
-                <div>
-                    <p></p>
-                    <div>
-                        <p></p>
-                        <p></p>
+                <div className="flex flex-direction-column normal-padding">
+                    <p className="anime-title">{objAnime.title.english}</p>
+                    <div className="flex anime-format">
+                        <p>{objAnime.format}</p>
+                    </div>
+                    <div className="flex">
+                        <p>{objAnime.description}</p>
                     </div>
                     <div>
-                        <p></p>
-                    </div>
-                    <div>
-                        <button></button>
+                        <button className="animeAdver-button flex flex-align-center flex-justify-center">
+                            <img className="play-icon" alt="play icon" src={playIcon}  ></img>
+                            COMENZAR A VER T1 E1</button>
                     </div>
                 </div>
             </div>
