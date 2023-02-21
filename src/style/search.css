@@ -1,24 +1,48 @@
-.search-container{
-    width: 100%;
-    background-color: #141519;
-
+.search-container {
+  width: 100%;
+  background-color: #141519;
+  color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
 }
-.search-container > input{
-    width: 95%;
-    margin: 0.5em;
-    
-    padding-right: 0.5em;
-    border: 0;
-    background-color: #141519;
-    color: aliceblue;
-    font-size: 1.5rem;
-    font-weight: 600;
+.search-container > input {
+  width: 95%;
+  margin: 0.5em;
+
+  padding-right: 0.5em;
+  border: 0;
+  background-color: #141519;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
-
-
 
 input[type="search"]:focus {
-    outline: none; /* remove the default orange outline */
-    border-bottom: 1px solid orange; /* replace with your desired focus border style */
-  }
-  
+  outline: none; /* remove the default orange outline */
+  border-bottom: 1px solid orange; /* replace with your desired focus border style */
+}
+.search-title {
+    margin: 1.8em 0.7em ;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.result-card-img img{
+    max-height: 40vw;
+    min-height: 40vw;
+    /* max-width: 50vw;
+    min-width: 50vw; */
+    max-width: 30vw;
+    min-width: 30vw;
+}
+.result-card-info{
+    font-size: 0.9rem;
+}
+.result-card-info > p {
+    margin: 0;
+    font-weight: 500;
+}
+.result-episodes{
+    color: #919da0;
+}
+.result-type{
+    color : #0e9caf;
+}
