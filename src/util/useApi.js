@@ -1,16 +1,16 @@
 
-import  { useState } from "react";
+import { useState } from "react";
 function UseApi(props) {
 
-    const [dataApi , setDataApi] = useState(props.default);
-   
+    const [dataApi, setDataApi] = useState(props.default);
 
- /*    React.useEffect(()=>{
-       
-        requestData();
-    },[]) */
 
-     // Here we define our query as a multi-line string
+    /*    React.useEffect(()=>{
+          
+           requestData();
+       },[]) */
+
+    // Here we define our query as a multi-line string
     // Storing it in a separate .graphql/.gql file is also possible
     /*  var query = `
  query ($id: Int) { # Define which variables will be used in the query (id)
@@ -49,12 +49,13 @@ function UseApi(props) {
 
     // Make the HTTP Api request
     function requestData() {
-        const url = 'https://graphql.anilist.co';
-        const options = getOptions();
-        fetch(url, options).then(handleResponse)
-            .then(data => setDataApi(data))
-            .catch(handleError);
-        
+        setTimeout(() => {
+            const url = 'https://graphql.anilist.co';
+            const options = getOptions();
+            fetch(url, options).then(handleResponse)
+                .then(data => setDataApi(data))
+                .catch(handleError);
+        }, 3000);
     }
 
     function handleResponse(response) {
@@ -63,15 +64,15 @@ function UseApi(props) {
         });
     }
 
-  
+
 
     function handleError(error) {
-      //  alert('Error, check console');
-        if(dataApi){
-            setDataApi([{error : error}]);
+        //  alert('Error, check console');
+        if (dataApi) {
+            setDataApi([{ error: error }]);
         }
     }
 
-    return [dataApi , requestData]
+    return [dataApi, requestData]
 }
 export default UseApi;

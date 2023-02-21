@@ -62,16 +62,16 @@ export default function BannerAnime(props) {
 
     }, [])
     const objAnime = dataApi.data.Page.media[0];
-    function backgroundImage(){
+   /*  function backgroundImage(){
         return {
-            backgroundColor : `${objAnime.coverImage.color}`
+            background : ` linear-gradient(0deg,rgb(0, 0, 0)  25%,${objAnime.coverImage.color} 75%)`
         }
-    }
-
+    } */
+ console.log(` linear-gradient(${objAnime.coverImage.color},rgb(0, 0, 0))`);
     return (<>
-        <div style={backgroundImage()} className="banner-anime">
+        <div  className="banner-anime">
             <img alt="banner-anime" src={objAnime.bannerImage}></img>
-            <div className=" flex  flex-justify-center"><button className="">ver ahora</button></div>
+            <div /* style={backgroundImage()} */ className=" flex  flex-justify-center"><button className="">ver ahora</button></div>
         </div>
 
     </>)

@@ -119,8 +119,8 @@ function CardsBar(props) {
                             color: ""
                         },
                         title: {
-                            english: "",
-                            userPreferred: ""
+                            english: "-",
+                            userPreferred: "-"
                         },
                         type: ""
 
