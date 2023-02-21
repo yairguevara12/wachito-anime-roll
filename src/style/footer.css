@@ -1,0 +1,35 @@
+.footer-container {
+  background: rgb(32, 56, 66);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 56, 66, 1) 36%,
+    rgba(0, 0, 0, 1) 88%
+  );
+  color: aliceblue;
+  font-family: 'Ubuntu', sans-serif;
+
+
+}
+.footer-section{
+    border-bottom: 1px solid white;
+  
+}
+.footer-section-title{
+    margin-right: auto;
+    width: 40%;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.footer-section-list{
+    margin-left: auto;
+    width: 60%;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+.footer-section-list > ul >li{
+    margin: 0 ;
+    margin-bottom: 1em;
+}
+.footer-section-title-final > p {
+    font-size: 0.8rem;
+}
