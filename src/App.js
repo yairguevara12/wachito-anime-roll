@@ -9,6 +9,7 @@ import "./style/util.css";
 import Header from "./components/header";
 import Menu from "./components/menu.js";
 import Footer from "./components/footer.js";
+import Search from './pages/search';
 function App() {
   const [isShownMenu, setIsShownMenu] = React.useState(false);
   const lockWindow = React.useRef(null);
@@ -30,8 +31,9 @@ function App() {
       <Header isShownMenu={isShownMenu} handleSetIsShownMenu={handleSetIsShownMenu} />
 
       {isShownMenu && <Menu />}
-      <Home />
-      <Footer></Footer>
+     {/*  <Home />
+      <Footer></Footer> */}
+      <Search></Search>
     </div>
   );
 }

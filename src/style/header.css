@@ -40,6 +40,7 @@ ul li {
   object-fit: cover;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .user-icon {
   object-fit: cover;

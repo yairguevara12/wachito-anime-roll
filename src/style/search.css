@@ -1,0 +1,24 @@
+.search-container{
+    width: 100%;
+    background-color: #141519;
+
+}
+.search-container > input{
+    width: 95%;
+    margin: 0.5em;
+    
+    padding-right: 0.5em;
+    border: 0;
+    background-color: #141519;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+input[type="search"]:focus {
+    outline: none; /* remove the default orange outline */
+    border-bottom: 1px solid orange; /* replace with your desired focus border style */
+  }
+  
