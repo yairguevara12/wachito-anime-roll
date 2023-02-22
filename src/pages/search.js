@@ -18,7 +18,7 @@ export default function Search(props) {
             }
             
            
-            media(search : "${search}" , type: ANIME){
+            media(search : "${search}" , type: ANIME, isAdult : false){
                   title {         
                     english
                     userPreferred
