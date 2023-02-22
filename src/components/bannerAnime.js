@@ -4,7 +4,7 @@ import "../style/bannerAnime.css";
 import UseApi from "../util/useApi";
 export default function BannerAnime(props) {
 
-    const [dataApi, requestData] = UseApi({
+    const {dataApi, requestData} = UseApi({
         query: `
     query ($page: Int, $perPage: Int , $id: Int) { 
        Page(page: $page, perPage: $perPage) {
@@ -67,8 +67,8 @@ export default function BannerAnime(props) {
             background : ` linear-gradient(0deg,rgb(0, 0, 0)  25%,${objAnime.coverImage.color} 75%)`
         }
     } */
- console.log(` linear-gradient(${objAnime.coverImage.color},rgb(0, 0, 0))`);
-    return (<>
+/*  console.log(` linear-gradient(${objAnime.coverImage.color},rgb(0, 0, 0))`);
+ */    return (<>
         <div  className="banner-anime">
             <img alt="banner-anime" src={objAnime.bannerImage}></img>
             <div /* style={backgroundImage()} */ className=" flex  flex-justify-center"><button className="">ver ahora</button></div>

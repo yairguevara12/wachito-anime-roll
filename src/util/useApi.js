@@ -73,6 +73,6 @@ function UseApi(props) {
         }
     }
 
-    return [dataApi, setDataApi , requestData]
+    return {dataApi, setDataApi , requestData}
 }
 export default UseApi;

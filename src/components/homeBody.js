@@ -18,7 +18,7 @@ function HomeBody() {
 
 
 
-   const [dataApi, requestData] = UseApi({
+   const {dataApi ,requestData} = UseApi({
       query: `
       query ($page: Int, $perPage: Int) { 
          Page(page: $page, perPage: $perPage) {
@@ -47,7 +47,7 @@ function HomeBody() {
       ,
       variables: {
          page: 1,
-         perPage: 5
+         perPage: 6
       },
       default: {
          data: {
@@ -80,8 +80,8 @@ function HomeBody() {
    // requestData();
 
    //console.log(dataApi);
-
-   const navbar = dataApi.data.Page.mediaTrends.map((element, id) => {
+/*    console.log(dataApi);
+ */   const navbar = dataApi.data.Page.mediaTrends.map((element, id) => {
 
       const styleColor = () => {
          return element.media.coverImage.color ? { backgroundColor: element.media.coverImage.color } : { backgroundColor: "#2abdbb" };

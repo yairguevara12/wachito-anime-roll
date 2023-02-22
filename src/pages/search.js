@@ -17,7 +17,7 @@ export default function Search(props) {
         alignSelf: "center"
     };
 //isAdult : false
-    const [dataApi, setDataApi, requestData] = UseApi({
+    const {dataApi, setDataApi, requestData} = UseApi({
         query: `
         query ($page: Int, $perPage: Int   ) { 
            Page(page: $page, perPage: $perPage) {

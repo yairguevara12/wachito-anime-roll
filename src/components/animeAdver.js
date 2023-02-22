@@ -7,7 +7,7 @@ import playIcon from "../img/boton-de-play.png";
 export default function AnimeAdver(props) {
 
 
-    const [dataApi, requestData] = UseApi({
+    const {dataApi, requestData} = UseApi({
         query: `
     query ($page: Int, $perPage: Int , $id: Int) { 
        Page(page: $page, perPage: $perPage) {

@@ -75,7 +75,7 @@ function CardsBar(props) {
     };
 
 
-    const [dataApi, requestData] = UseApi({
+    const {dataApi, requestData} = UseApi({
         query: `
         query ($page: Int, $perPage: Int) { 
            Page(page: $page, perPage: $perPage) {
