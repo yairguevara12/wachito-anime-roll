@@ -2,6 +2,7 @@ import React from "react";
 import "../style/util.css";
 import "../style/header.css";
 import arrows from "../img/up-and-down-arrows.png"
+import {Link} from 'react-router-dom';
 export default function Menu() {
     const [isShownGenners, setIsShownGenners] = React.useState(false);
     function swicthGenner() {
@@ -16,7 +17,7 @@ export default function Menu() {
 
             <ul>
                 <li className="menu-explorar">EXPLORAR</li>
-                <li>Popular</li>
+                <Link to={"/videos/popular"}><li>Popular</li></Link>
                 <li>Novedades</li>
                 <li>Alfabético</li>
                 <li onClick={swicthGenner} className="flex flex-between">Géneros

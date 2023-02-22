@@ -10,6 +10,7 @@ import Header from "./components/header";
 import Menu from "./components/menu.js";
 import Footer from "./components/footer.js";
 import Search from './pages/search';
+import Videos from './pages/videos';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -40,6 +41,9 @@ function App() {
         <Route exact path='/' element={<Home />}></Route>
         <Route exact path='/home' element={<Home />}></Route>
         <Route exact path='/search' element={<Search />}></Route>
+        <Route exact path='/videos/popular' element={<Videos />}></Route>
+        <Route exact path='/videos/:genero' element={<Videos />}></Route>
+
       </Routes >
 
 

@@ -1,0 +1,37 @@
+.videos-container{
+    gap: 1em;
+    background-color: #000000;
+    color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
+}
+.videos-container-cards {
+    flex-wrap: wrap;
+    gap: 1em;
+   
+}
+.video-card-container {
+    flex-grow: 1;
+    max-width: 40vw;
+    min-width: 40vw;
+
+}
+
+.video-card-img > img {
+  max-height: 60vw;
+  min-height: 60vw;
+
+  max-width: 40vw;
+  min-width: 40vw;
+}
+.video-card-title{
+    width: 100%;
+}
+.video-card-info{
+    width: 100%;
+    height: 100%;
+}
+.video-card-type{
+    margin-top: auto;
+    justify-self: end;
+    color: #2abdbb;
+}
