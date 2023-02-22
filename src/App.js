@@ -31,9 +31,10 @@ function App() {
       <Header isShownMenu={isShownMenu} handleSetIsShownMenu={handleSetIsShownMenu} />
 
       {isShownMenu && <Menu />}
-     {/*  <Home />
-      <Footer></Footer> */}
-      <Search></Search>
+     {/*  <Home />*/}
+     <Search></Search>
+     <Footer></Footer>
+      
     </div>
   );
 }

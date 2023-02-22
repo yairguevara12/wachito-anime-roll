@@ -14,6 +14,7 @@
   color: aliceblue;
   font-size: 1.5rem;
   font-weight: 600;
+  border-bottom: 1px solid orange; 
 }
 
 input[type="search"]:focus {
@@ -45,4 +46,7 @@ input[type="search"]:focus {
 }
 .result-type{
     color : #0e9caf;
+}
+.search-result{
+ margin-bottom: 4em;
 }
