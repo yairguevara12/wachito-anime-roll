@@ -35,7 +35,7 @@ function App() {
     <div ref={lockWindow} className='app' >
       <Header isShownMenu={isShownMenu} handleSetIsShownMenu={handleSetIsShownMenu} />
 
-      {isShownMenu && <Menu />}
+      {isShownMenu && <Menu handleSetIsShownMenu={handleSetIsShownMenu} />}
 
       <Routes >
         <Route exact path='/' element={<Home />}></Route>

@@ -26,3 +26,15 @@
   font-weight: 400;
   background-color: rgb(50, 51, 52);
 }
+
+@media (min-width: 570px) {
+  .banner-anime {
+    position: relative;
+    margin: 1em;
+  }
+  .banner-anime > img {
+    width: 100%;
+    height: 8em;
+  }
+}
+

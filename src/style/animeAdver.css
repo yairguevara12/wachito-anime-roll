@@ -25,11 +25,11 @@
   min-width: 50%;
 }
 .anime-cover {
-    max-height: 65vw;
-    min-height: 65vw;
-  
-    max-width: 45%;
-    min-width: 45%;
+  max-height: 65vw;
+  min-height: 65vw;
+
+  max-width: 45%;
+  min-width: 45%;
 }
 .anime-title {
   font-size: 1.5rem;
@@ -40,7 +40,6 @@
   margin-bottom: 0;
   color: #1d8280;
   font-weight: 600;
-
 }
 .animeAdver-button {
   width: 100%;
@@ -54,4 +53,39 @@
   width: 1em;
   height: 1em;
   margin-right: 0.5em;
+}
+@media (min-width: 570px) {
+  .anime-character {
+    max-height: 30vw;
+    min-height: 45vw;
+
+    max-width: 30%;
+    min-width: 30%;
+  }
+
+  .anime-cover {
+    max-height: 30vw;
+    min-height: 45vw;
+
+    max-width: 30%;
+    min-width: 30%;
+  }
+
+  .animeAdver-body {
+    color: aliceblue;
+    font-family: "Ubuntu", sans-serif;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+
+    border-image: linear-gradient( rgba(239,69,35,1) , rgba(250,183,24,1) 100% ) 30 ;
+    border-width: 15px;
+    border-style: solid;
+  }
+
+  .anime-pictures {
+   
+    background: rgb(13, 12, 12);
+  
+  }
 }

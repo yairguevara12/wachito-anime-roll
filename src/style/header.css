@@ -5,10 +5,9 @@
     width: 100vh; */
   width: 100%;
   height: 100vh;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   overflow: auto;
   font-size: 1rem;
-
 }
 ul {
   list-style-type: none;
@@ -19,33 +18,33 @@ ul li {
 }
 .menu-icon {
   object-fit: cover;
-  width: 20px;
-  height: 20px;
+  width: 1.5em;
+  height: 1.5em;
   cursor: pointer;
 }
 .menu-genners {
   padding: 0 1em;
   background-color: rgb(47, 49, 56);
   padding-top: 0.2em;
-  padding-bottom:0.2em ;
+  padding-bottom: 0.2em;
 }
 
 .logo-icon {
   object-fit: cover;
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
   align-content: center;
 }
 .lupa-icon {
   object-fit: cover;
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
   cursor: pointer;
 }
 .user-icon {
   object-fit: cover;
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
 }
 .header {
   height: 100%;
@@ -57,20 +56,19 @@ ul li {
   justify-content: center;
   cursor: pointer;
 }
-.menu-explorar{
-    font-size: 0.8rem;
-    color: rgb(151, 160, 160);
-    font-weight: 400;
-
+.menu-explorar {
+  font-size: 0.8rem;
+  color: rgb(151, 160, 160);
+  font-weight: 400;
 }
-.menu-manga{
-    border-top: 0.5px solid rgb(81, 80, 80);
+.menu-manga {
+  border-top: 0.5px solid rgb(81, 80, 80);
 }
-.up-down-arrow{
-    width: 18px;
-    height: 18px;
+.up-down-arrow {
+  width: 18px;
+  height: 18px;
 }
-.bar_menu{
+.bar_menu {
   width: 100%;
-  min-width : 300px ;
+  min-width: 300px;
 }

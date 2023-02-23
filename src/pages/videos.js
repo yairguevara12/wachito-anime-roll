@@ -21,8 +21,8 @@ export default function Videos() {
 
     }) */
 
-    console.log(showLoarder);
-
+    /*     console.log(showLoarder);
+     */
 
 
     function searchGenre() {
@@ -95,21 +95,25 @@ export default function Videos() {
     });
 
 
-
     React.useEffect(() => {
         requestData();
 
+        setShowLoarder(true);
+      
+
+    }, [genre]);
+    React.useEffect(() => {
+
+
         setTimeout(() => {
             setShowLoarder(false);
-        }, 3500);
-        console.log('running efect');
-
-        
-    }, [genre]);
+        }, 2000);
 
 
-    console.log(dataApi);
-    const videoCards = dataApi.data.Page.media.map((item, index) => {
+    }, [dataApi]);
+
+/*     console.log(dataApi);
+ */    const videoCards = dataApi.data.Page.media.map((item, index) => {
 
         const titleAnime = () => {
             return item.title.userPreferred ? item.title.userPreferred : item.title.english;
