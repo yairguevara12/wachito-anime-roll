@@ -9,7 +9,7 @@ import goku from "../img/goku-background.png";
 import myHeroAcademy from "../img/my-hero-acedemy.png";
 import BannerAnime from "./bannerAnime";
 import chainsawMan from "../img/chain-saw-man.png";
-function HomeBody() {
+function HomeBody(props) {
 
    // const [dataHero, setDataHero] = React.useState();
 
@@ -18,7 +18,7 @@ function HomeBody() {
 
 
 
-   const {dataApi ,requestData} = UseApi({
+   const { dataApi, requestData } = UseApi({
       query: `
       query ($page: Int, $perPage: Int) { 
          Page(page: $page, perPage: $perPage) {
@@ -77,6 +77,12 @@ function HomeBody() {
       requestData();
    }, []);
 
+   function shownBody(){
+      return !props.loarderIsShown ? {display : ""} : {display:"none"} 
+   }
+
+
+
    // requestData();
 
    //console.log(dataApi);
@@ -111,7 +117,7 @@ function HomeBody() {
       )
    });
    return (
-      <div>
+      <div style={shownBody()}>
          <MainNavbar>
             {
                navbar
@@ -172,13 +178,13 @@ function HomeBody() {
                <p>!Veremos que les espera en su segunda vida!</p>
             </div>
          </CardsBar>
-            <br>
-            </br>
-            <BannerAnime idAnime={16498}></BannerAnime>
-            <br>
-            </br>
-            <br>
-            </br>
+         <br>
+         </br>
+         <BannerAnime idAnime={16498}></BannerAnime>
+         <br>
+         </br>
+         <br>
+         </br>
       </div>
    )
 }

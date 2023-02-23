@@ -41,8 +41,8 @@ function App() {
         <Route exact path='/' element={<Home />}></Route>
         <Route exact path='/home' element={<Home />}></Route>
         <Route exact path='/search' element={<Search />}></Route>
-        <Route exact path='/videos/popular' element={<Videos />}></Route>
-        <Route exact path='/videos/:genero' element={<Videos />}></Route>
+        <Route exact path='/videos/popular/' element={<Videos />}></Route>
+        <Route exact path='/videos/genero/:genre?' element={<Videos />}></Route>
 
       </Routes >
 

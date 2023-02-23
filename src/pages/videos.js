@@ -3,12 +3,35 @@ import "../style/util.css";
 import VideoCard from "../components/videoCard";
 import UseApi from "../util/useApi";
 import "../style/videos.css";
-import GridLoader  from "react-spinners/GridLoader";
-
+import GridLoader from "react-spinners/GridLoader";
+import { useParams } from 'react-router-dom';
 export default function Videos() {
     const [showLoarder, setShowLoarder] = React.useState(true);
 
-    const searchParams = "search..";
+    /* const {location} = useLocation (); */
+    /* const {genre} = useParams(); */
+    const { genre } = useParams();
+    /*  const [genreSearch, setGenreSearch] = React.useState(""); */
+
+    /* 
+    setGenreSearch(() => {
+
+        
+        return genre ? `,search:"${genre}"` : "";
+
+    }) */
+
+    console.log(showLoarder);
+
+
+
+    function searchGenre() {
+
+        return genre ? `,search:"${genre}"` : "";
+
+    }
+
+
     const override = {
         display: "block",
         margin: "2em auto",
@@ -25,7 +48,7 @@ export default function Videos() {
               }
               
             
-            media(type:ANIME){
+            media(type:ANIME ${searchGenre()} , isAdult:false ){
                     title {         
                       english
                       userPreferred
@@ -50,22 +73,22 @@ export default function Videos() {
         default: {
             data: {
                 Page: {
-                    
-                        
-                            media: [{
-                                coverImage: {
-                                    extraLarge: "",
-                                    color: ""
-                                },
-                                title: {
-                                    english: "",
-                                    userPreferred: "",
-                                },
-                                type: ""
 
-                            }]
-                        
-                    
+
+                    media: [{
+                        coverImage: {
+                            extraLarge: "",
+                            color: ""
+                        },
+                        title: {
+                            english: "",
+                            userPreferred: "",
+                        },
+                        type: ""
+
+                    }]
+
+
                 }
             }
         }
@@ -79,8 +102,12 @@ export default function Videos() {
         setTimeout(() => {
             setShowLoarder(false);
         }, 3500);
+        console.log('running efect');
 
-    }, []);
+        
+    }, [genre]);
+
+
     console.log(dataApi);
     const videoCards = dataApi.data.Page.media.map((item, index) => {
 
@@ -95,7 +122,7 @@ export default function Videos() {
             <h2>Anime mas Populares</h2>
             <div className="flex  videos-container-cards">
 
-            {showLoarder && <GridLoader
+                {showLoarder && <GridLoader
                     color={"#36d7b7"}
                     loading={true}
                     cssOverride={override}
@@ -104,7 +131,7 @@ export default function Videos() {
                     data-testid="loader"
                 />}
 
-                { !showLoarder && videoCards}
+                {!showLoarder && videoCards}
             </div>
 
         </div>
