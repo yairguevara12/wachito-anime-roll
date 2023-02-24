@@ -72,3 +72,30 @@ ul li {
   width: 100%;
   min-width: 300px;
 }
+.menu-brand-name {
+  display: none;
+
+  align-items: center;
+}
+.menu-brand-name > p {
+  color: pink;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+@media (min-width: 570px) {
+  .menu-brand-name {
+    display: flex;
+    cursor: pointer;
+
+    height: 50px;
+  }
+  .menu-body {
+    width: 40%;
+    
+  
+  }
+}

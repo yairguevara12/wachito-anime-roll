@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (<div className="footer-container flex flex-direction-column ">
 
-        <div className="footer-section flex normal-padding normal-margin">
+        <div className="footer-section navegacion flex normal-padding normal-margin">
             <div className="footer-section-title">
                 <p>Navegación</p>
             </div>
@@ -29,7 +29,7 @@ export default function Footer() {
             <div></div>
         </div>
 
-        <div className="footer-section flex normal-padding normal-margin">
+        <div className="footer-section nosotros flex normal-padding normal-margin">
             <div className="footer-section-title">
                 <p>Conecta con nosotros</p>
             </div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 </ul>
             </div>
         </div>
-        <div className="footer-section flex normal-padding normal-margin">
+        <div className="footer-section wachitoroll flex normal-padding normal-margin">
             <div className="footer-section-title"><p>WachitoRoll</p></div>
             <div className="footer-section-list">
                 <ul>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="footer-section flex normal-padding normal-margin">
+        <div className="footer-section author flex normal-padding normal-margin">
             <div className="footer-section-title-final">
                 <p>©Yair Guevara </p>
                 <p>Educational Project</p>

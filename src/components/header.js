@@ -16,16 +16,19 @@ export default function Header(props) {
     }
 
     return (
-        <div className="bar_menu  basic-background-color flex flex-between">
-            <div className="flex flex-align-center flex-gap">
+        <div className="bar_menu  basic-background-color flex flex-between ">
+            <div className="flex flex-align-center flex-gap flex-justify-center">
                 <div onClick={() => props.handleSetIsShownMenu()} className="menu-icon-body flex" style={flipBackgroundColor()}>
                     <img className="menu-icon " alt="menu" src={Menu}></img>
                 </div>
                 <Link to={'/home'}>
                 <div className="menu-icon-body flex">
                     <img className="logo-icon" alt="logo" src={Logo}></img>
-                </div>
+                </div>                
                 </Link>
+                <div className="menu-brand-name flex  flex-justify-center">
+                    <p>WachitoRoll</p>
+                </div>
             </div>
             <div className="flex flex-align-center flex-gap">
                 <Link to={'/search'} > <div className="menu-icon-body flex">

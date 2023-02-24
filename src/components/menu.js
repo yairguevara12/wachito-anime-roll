@@ -13,7 +13,7 @@ export default function Menu(props) {
 
 
     return (
-        <div className="menu-body ">
+        <div className="menu-body fixed-top">
 
             <ul>
                 <li className="menu-explorar">EXPLORAR</li>
