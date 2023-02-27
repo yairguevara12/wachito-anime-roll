@@ -16,7 +16,7 @@ export default function Header(props) {
     }
 
     return (
-        <div className="bar_menu  basic-background-color flex flex-between ">
+        <div className="bar_menu  basic-background-color flex flex-between fixed-top">
             <div className="flex flex-align-center flex-gap flex-justify-center">
                 <div onClick={() => props.handleSetIsShownMenu()} className="menu-icon-body flex" style={flipBackgroundColor()}>
                     <img className="menu-icon " alt="menu" src={Menu}></img>

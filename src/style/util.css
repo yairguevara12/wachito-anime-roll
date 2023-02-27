@@ -43,3 +43,10 @@
         background-color: rgb(35, 37, 43);   
     
 }
+.adding-top{
+    position: fixed;
+    top: 3.1em;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
