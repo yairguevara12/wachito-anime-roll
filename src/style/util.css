@@ -50,3 +50,7 @@
     left: 0;
     z-index: 1030;
 }
+.max-total-width{
+    max-width: 1100px;
+    margin: auto ;
+} 

@@ -69,7 +69,7 @@ export default function BannerAnime(props) {
     } */
 /*  console.log(` linear-gradient(${objAnime.coverImage.color},rgb(0, 0, 0))`);
  */    return (<>
-        <div  className="banner-anime">
+        <div  className="banner-anime max-total-width">
             <img alt="banner-anime" src={objAnime.bannerImage}></img>
             <div /* style={backgroundImage()} */ className=" flex  flex-justify-center"><button className="">ver ahora</button></div>
         </div>

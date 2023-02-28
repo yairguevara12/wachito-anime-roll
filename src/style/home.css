@@ -9,26 +9,47 @@
 .card-anime {
   /* width:  100% ;
     height: 200px; */
-  width: 100%;
-  height: 100%;
+
+  min-width: 134px;
+  min-height: 260px;
+
+  max-height: 360px;
+  max-width: 200px;
   color: aliceblue;
-  margin: 1em 1em;
+  
 }
 .card-anime-img {
-  max-height: 70vw;
-  min-height: 70vw;
+  /* height: 65vw; */
 
-  max-width: 100%;
-  min-width: 100%;
+  min-width: 134px;
+  min-height: 200px;
+
+ 
+  max-height: 300px;
+  max-width: 200px;
+ 
+  height: 60vw;
+  width: 100%;
 }
 .card-anime-img > img {
+  /*  max-height: 280px;
+  max-width: 199px; */
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .card-anime-title {
+  min-width: 134px;
+  min-height: 60px;
+
+  max-height: 60px;
+  max-width: 200px;
   width: 100%;
   height: 100%;
+}
+.react-multi-carousel-list{
+  max-width: 1100px;
+  margin: auto;
 }
 .react-multi-carousel-list .react-multi-carousel-item {
   margin: 0.5em 0.1em;
@@ -66,10 +87,21 @@
     rgba(35, 32, 82, 1) 100%
   );
 }
-@media (min-width: 457px) {
+@media (min-width: 500px) {
   .card-anime-img {
-    max-height: 35vh;
-    min-height: 35vh;
+    /* height: 65vw; */
+  
+    
+   
+    height: 60vw;
+    width: 100%;
+  }
+
+
+
+  /* .card-anime-img {
+    max-height: 45vh;
+    min-height: 45vh;
 
     max-width: 100%;
     min-width: 100%;
@@ -82,10 +114,10 @@
   .card-anime-title {
     width: 100%;
     height: 100%;
-  }
+  } */
 }
 @media (min-width: 570px) {
-  .card-anime-img {
+  /*  .card-anime-img {
     max-height: 40vw;
     min-height: 40vw;
 
@@ -100,5 +132,23 @@
   .card-anime-title {
     width: 100%;
     height: 100%;
+  } */
+}
+@media (min-width: 960px) {
+ /*  .card-anime-img {
+    max-height: 25vw;
+    min-height: 25vw;
+
+    max-width: 100%;
+    min-width: 100%;
   }
+  .card-anime-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-anime-title {
+    width: 100%;
+    height: 100%;
+  } */
 }

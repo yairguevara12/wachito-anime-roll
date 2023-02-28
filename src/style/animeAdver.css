@@ -16,16 +16,17 @@
     rgba(229, 103, 31, 1) 77%,
     rgba(0, 0, 0, 1) 77%
   );
+  max-height: 400px;
 }
 .anime-character {
-  max-height: 65vw;
+  max-height: 400px;
   min-height: 65vw;
 
-  max-width: 50%;
+  max-height: 450px;
   min-width: 50%;
 }
 .anime-cover {
-  max-height: 65vw;
+  max-height: 400px;
   min-height: 65vw;
 
   max-width: 45%;
@@ -56,15 +57,13 @@
 }
 @media (min-width: 570px) {
   .anime-character {
-    max-height: 30vw;
     min-height: 45vw;
 
-    max-width: 30%;
-    min-width: 30%;
+    max-width: 35%;
+    min-width: 35%;
   }
 
   .anime-cover {
-    max-height: 30vw;
     min-height: 45vw;
 
     max-width: 30%;
@@ -87,5 +86,30 @@
    
     background: rgb(13, 12, 12);
   
+  }
+}
+@media (min-width: 960px) {
+  .animeAdver-body {
+    color: aliceblue;
+    font-family: "Ubuntu", sans-serif;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .anime-character {
+    min-height: 20vw;
+
+    max-width: 50%;
+    min-width: 50%;
+  }
+
+  .anime-cover {
+    min-height: 20vw;
+
+    max-width: 50%;
+    min-width: 50%;
   }
 }

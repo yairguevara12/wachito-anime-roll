@@ -41,7 +41,7 @@ export default function Home() {
     };
 
     return (
-        <div style={styleloading()} className="home flex flex-direction-column">
+        <div style={styleloading()} className="home flex flex-direction-column flex-justify-center ">
 
             {/*  <Header isShownMenu={isShownMenu} handleSetIsShownMenu={handleSetIsShownMenu} />
 

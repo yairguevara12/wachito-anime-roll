@@ -158,7 +158,7 @@ export default function Search(props) {
         <div className="search-container flex flex-justify-center flex-column">
             <input placeholder="Buscar..." onChange={searchValue} className="" type="search"></input>
             <p className="search-title">Resultados más relevantes</p>
-            <div className="search-result">
+            <div className="search-result flex flex-direction-column">
 
 
                {showLoarder &&  <HashLoader

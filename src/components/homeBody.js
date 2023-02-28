@@ -124,8 +124,8 @@ function HomeBody(props) {
             }
          </MainNavbar>
 
-         <CardsBar genre='Sci-fi' page={1}>
-            <div className="cardsBar-Title normal-padding">
+         <CardsBar  genre='Sci-fi' page={1}>
+            <div className="cardsBar-Title normal-padding max-total-width">
                <h3>!Míralos gratis en febrero!</h3>
                <p>!Enamórate con un nuevo anime este mes!</p>
             </div>
@@ -137,7 +137,7 @@ function HomeBody(props) {
          <AnimeAdver idAnime={21459} character={myHeroAcademy}></AnimeAdver>
          <br></br>
          <CardsBar genre='romance' page={2}>
-            <div className="cardsBar-Title normal-padding">
+            <div className="cardsBar-Title normal-padding max-total-width">
                <h3>!Los mejores Romances!</h3>
                <p>!Llora y disfruta del amor de primavera!</p>
             </div>
@@ -146,7 +146,7 @@ function HomeBody(props) {
 
 
          <CardsBar genre='Action' page={3}>
-            <div className="cardsBar-Title normal-padding">
+            <div className="cardsBar-Title normal-padding max-total-width">
                <h3>!Accion explosiva!</h3>
                <p>!recarga y dispara!</p>
             </div>
@@ -154,7 +154,7 @@ function HomeBody(props) {
 
 
          <CardsBar genre='Psychological' page={1}>
-            <div className="cardsBar-Title normal-padding">
+            <div className="cardsBar-Title normal-padding max-total-width">
                <h3>!Juegos Mentales!</h3>
                <p>!nunca se sabe como terminara!</p>
             </div>
@@ -166,14 +166,14 @@ function HomeBody(props) {
          <br></br>
          <br></br>
          <CardsBar genre='Drama' page={1}>
-            <div className="cardsBar-Title normal-padding">
+            <div className="cardsBar-Title normal-padding max-total-width">
                <h3>!La controversia del amor!</h3>
                <p>!Amorrrrr....!</p>
             </div>
          </CardsBar>
 
          <CardsBar genre='Fantasy' page={1}>
-            <div className="cardsBar-Title normal-padding">
+            <div className="cardsBar-Title normal-padding max-total-width">
                <h3>!Morir y Rencarnar!</h3>
                <p>!Veremos que les espera en su segunda vida!</p>
             </div>

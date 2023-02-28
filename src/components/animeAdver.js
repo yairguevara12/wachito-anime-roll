@@ -85,7 +85,7 @@ export default function AnimeAdver(props) {
     }
     return (
         <>
-            <div className="animeAdver-body flex flex-direction-column ">
+            <div className="animeAdver-body flex flex-direction-column max-total-width">
                 <div className="flex flex-between anime-pictures normal-padding">
                     <img alt="anime" src={props.character} className="anime-character"></img>
                     <img alt="anime" src={objAnime.coverImage.large} className="anime-cover"></img>
