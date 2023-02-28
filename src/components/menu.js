@@ -9,25 +9,22 @@ export default function Menu(props) {
         setIsShownGenners(prev => !prev);
     }
 
-    function responsiveMenu() {
-        /*         console.log(hideNav: window.innerWidth <= 760);
-         */
-        //console.log(window.innerWidth);
+  /*   function responsiveMenu() {
+      
         if(window.innerWidth >= 560){
             console.log("Apply");
             return " adding-top"
         }
 
         return "";
-    }
-  //  resize();
+    } */
 
     return (
-        <div className={`menu-body ${responsiveMenu()} ` } >
+        <div className={`menu-body adding-top ` } >
 
             <ul>
                 <li className="menu-explorar">EXPLORAR</li>
-                <Link to={"/videos/popular"}><li>Popular</li></Link>
+                <Link to={"/videos/popular"} onClick={() => props.handleSetIsShownMenu()}><li>Popular</li></Link>
                 <li>Novedades</li>
                 <li>Alfabético</li>
                 <li onClick={swicthGenner} className="flex flex-between">Géneros

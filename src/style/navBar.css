@@ -1,5 +1,5 @@
 #carouselExampleIndicators {
-  margin-top: 3em;
+ /*  margin-top: 3em; */
   width: 100%;
   min-width: 300px;
   height: 620px;
@@ -22,7 +22,7 @@
 .carousel-container-img {
   width: 100%;
   height: 100%;
-  height: 400px;
+  height: 420px;
   background-color: inherit;
 }
 .carousel-img {
@@ -49,6 +49,7 @@
     width: 100%;
     text-align: center;
     text-decoration: none;
+    max-width: 450px;
 }
 .carousel-control-next .carousel-control-next-icon {
     background-image: url("../img/right-arrow.png");

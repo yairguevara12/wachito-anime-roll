@@ -41,7 +41,7 @@ export default function Home() {
     };
 
     return (
-        <div style={styleloading()} className="home flex flex-direction-column flex-justify-center ">
+        <div style={styleloading()} className="home flex flex-direction-column flex-justify-center adding-top-margin">
 
             {/*  <Header isShownMenu={isShownMenu} handleSetIsShownMenu={handleSetIsShownMenu} />
 
@@ -56,6 +56,6 @@ export default function Home() {
             />}
 
              {<HomeBody loarderIsShown={showLoarder}></HomeBody>} 
-        </div>
+      </div>
     );
 }

@@ -8,6 +8,7 @@
   font-family: "Ubuntu", sans-serif;
   overflow: auto;
   font-size: 1rem;
+  
 }
 ul {
   list-style-type: none;
@@ -95,8 +96,8 @@ ul li {
     height: 50px;
   }
   .menu-body {
-    width: 40%;
-    
-  
+/*     width: 40%;
+ */    
+ max-width: 350px;
   }
 }
