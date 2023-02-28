@@ -114,12 +114,17 @@ export default function Videos() {
 
 /*     console.log(dataApi);
  */    const videoCards = dataApi.data.Page.media.map((item, index) => {
-
         const titleAnime = () => {
             return item.title.userPreferred ? item.title.userPreferred : item.title.english;
         }
 
-        return <VideoCard key={index} img={item.coverImage.extraLarge} title={titleAnime()} type={item.type}  ></VideoCard>
+        const validateLength = () => {
+            const Anime = titleAnime();
+            return Anime.length > 50 ? `${Anime.slice(0, 50)}..`
+            : Anime  }
+        //console.log(titleAnime().length > 53 ? titleAnime  );
+
+        return <VideoCard key={index} img={item.coverImage.extraLarge} title={validateLength()} type={item.type}  ></VideoCard>
     })
     return (
         <div className="flex normal-padding videos-container flex-direction-column">

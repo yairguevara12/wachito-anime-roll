@@ -1,38 +1,48 @@
-.videos-container{
-    margin-top: 3em;
-    gap: 1em;
-    background-color: #000000;
-    color: aliceblue;
+.videos-container {
+  margin-top: 3em;
+  gap: 1em;
+  background-color: #000000;
+  color: aliceblue;
   font-family: "Ubuntu", sans-serif;
 }
 .videos-container-cards {
-    flex-wrap: wrap;
-    gap: 1em;
-   
+  flex-wrap: wrap;
+  gap: 1em;
 }
 .video-card-container {
-    flex-grow: 1;
-    max-width: 40vw;
-    min-width: 40vw;
+  flex-grow: 1;
 
+  max-height: 300px;
+  min-height: 290px;
+
+  min-width: 150px;
+  max-width: 150px;
 }
 
 .video-card-img > img {
-  max-height: 60vw;
+  /*  max-height: 60vw;
   min-height: 60vw;
-
+ 
   max-width: 40vw;
-  min-width: 40vw;
+  min-width: 40vw; */
+  max-height: 200px;
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
 }
-.video-card-title{
-    width: 100%;
+.video-card-title {
+  height: 70%;
 }
-.video-card-info{
-    width: 100%;
-    height: 100%;
+.video-card-info {
+  width: 100%;
+  height: 100%;
+  max-height: 100px;
+  min-height: 90px;
 }
-.video-card-type{
-    margin-top: auto;
-    justify-self: end;
-    color: #2abdbb;
+.video-card-type {
+  height: 30%;
+  margin-top: auto;
+  justify-self: end;
+  color: #2abdbb;
+  margin-bottom: 0;
 }

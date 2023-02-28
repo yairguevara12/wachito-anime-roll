@@ -171,8 +171,8 @@ function CardsBar(props) {
                 className=""
                 containerClass="container-with-dots"
                 dotListClass=""
-                //draggable
-                focusOnSelect={false}
+/*                 draggable
+ */                focusOnSelect={false}
                 infinite
                 itemClass=""
                 keyBoardControl
@@ -188,9 +188,9 @@ function CardsBar(props) {
                 showDots={false}
                 sliderClass=""
                 slidesToSlide={1}
-                swipeable
-                responsive={responsive}
-                removeArrowOnDeviceType={["tablet", "mobile"]}
+/*                  swipeable 
+ */                responsive={responsive}
+                removeArrowOnDeviceType={[ "mobile"]}
 
             >
                 {cards}
