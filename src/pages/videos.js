@@ -5,8 +5,10 @@ import UseApi from "../util/useApi";
 import "../style/videos.css";
 import GridLoader from "react-spinners/GridLoader";
 import { useParams } from 'react-router-dom';
+import useToken from "../util/useToken";
 export default function Videos() {
     const [showLoarder, setShowLoarder] = React.useState(true);
+    const {validateTokenInStorage} = useToken();
 
     /* const {location} = useLocation (); */
     /* const {genre} = useParams(); */
@@ -96,12 +98,16 @@ export default function Videos() {
 
 
     React.useEffect(() => {
+        
         requestData();
 
         setShowLoarder(true);
       
 
     }, [genre]);
+    React.useEffect(() => {
+        validateTokenInStorage();
+    },[]);
     React.useEffect(() => {
 
 

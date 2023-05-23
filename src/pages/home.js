@@ -2,7 +2,7 @@ import React from "react";
 import "../style/util.css";
 import HomeBody from "../components/homeBody.js";
 import GridLoader from "react-spinners/GridLoader";
-
+import useToken from "../util/useToken";
 export default function Home() {
     const override = {
         display: "block",
@@ -11,7 +11,7 @@ export default function Home() {
         alignSelf: "center" 
     };
     const [showLoarder, setShowLoarder] = React.useState(true);
-
+    const {validateTokenInStorage} = useToken();
     /* const [isShownMenu, setIsShownMenu] = React.useState(false);
    const lockWindow = React.useRef(null);
    function handleSetIsShownMenu() {
@@ -28,6 +28,9 @@ export default function Home() {
 
    }, [isShownMenu]) */
     React.useEffect(() => {
+
+
+        validateTokenInStorage();
         setTimeout(() => {
             setShowLoarder(false);
         }, 4000);

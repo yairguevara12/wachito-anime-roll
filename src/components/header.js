@@ -5,7 +5,7 @@ import Menu from "../img/menu.png"
 import Logo from "../img/logo.png"
 import Lupa from "../img/lupa.png"
 import User from "../img/user.png"
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function Header(props) {
 
 
@@ -22,9 +22,9 @@ export default function Header(props) {
                     <img className="menu-icon " alt="menu" src={Menu}></img>
                 </div>
                 <Link to={'/home'}>
-                <div className="menu-icon-body flex">
-                    <img className="logo-icon" alt="logo" src={Logo}></img>
-                </div>                
+                    <div className="menu-icon-body flex">
+                        <img className="logo-icon" alt="logo" src={Logo}></img>
+                    </div>
                 </Link>
                 <div className="menu-brand-name flex  flex-justify-center">
                     <p>WachitoRoll</p>
@@ -35,10 +35,11 @@ export default function Header(props) {
                     <img className="lupa-icon " alt="lupa" src={Lupa}></img>
                 </div>
                 </Link>
-                <div className="menu-icon-body flex">
-                    <img className="user-icon " alt="lupa" src={User}></img>
-                </div>
-
+                <Link to={'/user'}>
+                    <div className="menu-icon-body flex">
+                        <img className="user-icon " alt="lupa" src={User}></img>
+                    </div>
+                </Link>
             </div>
         </div>
     )

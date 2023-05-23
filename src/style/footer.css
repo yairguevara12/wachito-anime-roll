@@ -8,7 +8,7 @@
   color: aliceblue;
   font-family: 'Ubuntu', sans-serif;
 
- height: 100%;
+ 
 }
 .footer-section{
     border-bottom: 1px solid white;
@@ -36,6 +36,7 @@
 @media (min-width: 570px) {
    
 .footer-container{
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr );
     grid-template-areas: 

@@ -1,0 +1,27 @@
+.user-img {
+  width: 50%;
+  max-width: 200px;
+  min-width: 100px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-display{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+@media (max-width: 768px) {
+  .user-img {
+    width: 40%;
+    max-width: 150px;
+    min-width: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-img {
+    width: 60%;
+    max-width: 100px;
+    min-width: 60px;
+  }
+}

@@ -17,8 +17,11 @@
 
   min-width: 150px;
   max-width: 150px;
+  transition: transform 0.2s ease-in-out;
 }
-
+.video-card-container:hover {
+  transform: scale(1.05);
+}
 .video-card-img > img {
   /*  max-height: 60vw;
   min-height: 60vw;

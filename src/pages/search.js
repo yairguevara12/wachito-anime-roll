@@ -4,7 +4,7 @@ import "../style/util.css";
 import ResultCard from "../components/resultCard";
 import UseApi from "../util/useApi";
 import HashLoader from "react-spinners/HashLoader";
-
+import useToken from "../util/useToken";
 
 
 export default function Search(props) {
@@ -16,8 +16,9 @@ export default function Search(props) {
         borderColor: "green",
         alignSelf: "center"
     };
-//isAdult : false
-    const {dataApi, setDataApi, requestData} = UseApi({
+    const { validateTokenInStorage } = useToken();
+    //isAdult : false
+    const { dataApi, setDataApi, requestData } = UseApi({
         query: `
         query ($page: Int, $perPage: Int   ) { 
            Page(page: $page, perPage: $perPage) {
@@ -82,9 +83,9 @@ export default function Search(props) {
         }
     });
     function searchValue(e) {
-       
-          
-       
+
+
+
         setSearch(e.target.value);
         setDataApi({
             data: {
@@ -117,15 +118,18 @@ export default function Search(props) {
 
 
         requestData();
-       search ? setShowLoarder(true): setShowLoarder(false);
-        
+        search ? setShowLoarder(true) : setShowLoarder(false);
+
 
 
     }, [search]);
-     React.useEffect(() => {
+    React.useEffect(() => {
+        validateTokenInStorage();
+    }, []);
+    React.useEffect(() => {
 
-/*         console.log(dataApi);
- */
+        /*         console.log(dataApi);
+         */
         if (dataApi.data.Page.media.length > 0) {
             if (dataApi.data.Page.media[0].id > 0) {
 
@@ -134,17 +138,17 @@ export default function Search(props) {
 
             }
         } else {
-/*             console.log("NOT showloarder");
- */           
-            search ? setShowLoarder(true): setShowLoarder(false);
+            /*             console.log("NOT showloarder");
+             */
+            search ? setShowLoarder(true) : setShowLoarder(false);
 
-            
+
         }
 
 
-    }, [dataApi]); 
+    }, [dataApi]);
 
- 
+
 
     const resultCards = dataApi.data.Page.media.map((item, index) => {
         const titleAnime = () => {
@@ -161,7 +165,7 @@ export default function Search(props) {
             <div className="search-result flex flex-direction-column">
 
 
-               {showLoarder &&  <HashLoader
+                {showLoarder && <HashLoader
                     color={"#36d7b7"}
                     loading={true}
                     cssOverride={override}
