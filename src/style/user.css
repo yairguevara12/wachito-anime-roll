@@ -1,3 +1,14 @@
+.user-container {
+  width: 100%;
+  background-color: #000000;
+  position: relative;
+}
+.userBannerContainer{
+  width: 100%;
+}
+.userBanner{
+  width: 100%;
+}
 .user-img {
   width: 50%;
   max-width: 200px;
@@ -6,22 +17,9 @@
   border-radius: 50%;
   object-fit: cover;
 }
-.user-display{
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
-@media (max-width: 768px) {
-  .user-img {
-    width: 40%;
-    max-width: 150px;
-    min-width: 75px;
-  }
+.userBodyContainer{
+  color: aliceblue;
+  margin-left: 22em;
+  margin-right: 22em;
 }
 
-@media (max-width: 480px) {
-  .user-img {
-    width: 60%;
-    max-width: 100px;
-    min-width: 60px;
-  }
-}

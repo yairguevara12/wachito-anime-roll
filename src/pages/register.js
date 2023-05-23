@@ -3,9 +3,8 @@ import "../style/util.css";
 import "../style/login.css";
 import "../style/util.css"
 import registerCharacter from "../img/register-character.png";
-import secondImageCharacter from "../img/login-character_2.png";
-import useAuth from "../util/useAuth";
-/* import useToken from "../util/useToken"; */
+/* import useAuth from "../util/useAuth";
+ *//* import useToken from "../util/useToken"; */
 
 export default function Register() {
     // create a login page
@@ -13,7 +12,7 @@ export default function Register() {
     const [password, setPassword] = React.useState(""); */
 
     const [formData, setFormData] = React.useState(
-        { email: "", password: "" }
+        { email: "", password: "" , userName:""}
     );
 
 
@@ -33,7 +32,7 @@ export default function Register() {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setError((prevError)=>!prevError);
     }
 
 
@@ -46,6 +45,8 @@ export default function Register() {
                 <div><h1 className="titleLogin">Crear Cuenta</h1></div>
                 <img className="firstCharacterRegister" src={registerCharacter} alt="imagen de personaje" />
                 <form onSubmit={handleSubmit} className="flex flex-direction-column mainForm flex-align-center flex-justify-center">
+                    <input type="text" placeholder="Nombre de usuario" name="userName" value={formData.userName}
+                        onChange={handIeChange} />
                     <input type="text" placeholder="Direccion de email" name="email" value={formData.email}
                         onChange={handIeChange} />
                     <input type="password" placeholder="Contraseña" name="password" value={formData.password}
