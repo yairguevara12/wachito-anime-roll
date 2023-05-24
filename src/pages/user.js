@@ -2,8 +2,10 @@ import React from "react";
 import userPicture from "../img/User-Picture.jpg"
 import "../style/user.css";
 import "../style/util.css";
+import '../style/accountContent.css';
 import useToken from "../util/useToken";
 import bannerImage from "../img/banner-image.png"
+import Preference from "../components/account-content/preference";
 export default function User() {
     const user = {
         name: "John",
@@ -26,9 +28,9 @@ export default function User() {
                         <div className="userName ">{user.name}</div>
                     </div>
                 </div>
-                <div className="userBodyContainer grid flex-direction-column ">
+                <div className="userBodyContainer    ">
 
-                    <div className="userNavigation">
+                    <div className="userNavigation flex justify-content-center">
                         <div className="configurationList">
                             <ul>
                                 <li><a href="/">General</a></li>
@@ -47,8 +49,8 @@ export default function User() {
 
 
                         </div>
-                        <div className="account-content">
-                                
+                        <div className="accountContent flex justify-content-center">
+                                <Preference></Preference>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #000000;
   position: relative;
+  font-family: "Ubuntu", sans-serif;
 }
 .userBannerContainer{
   width: 100%;
@@ -19,7 +20,16 @@
 }
 .userBodyContainer{
   color: aliceblue;
-  margin-left: 22em;
-  margin-right: 22em;
+  width: 100%;
 }
+.userNavigation{
+  width: 100%;
 
+}
+.configurationList{
+  width: 20%;
+}
+.accountContent{
+  background-color: #191a1e;
+  width: 40%;
+}

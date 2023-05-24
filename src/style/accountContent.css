@@ -1,0 +1,29 @@
+.preferenceContainer{
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 80%;
+}
+.toogleSwitch{
+    align-items: center;
+    background-color: #192e38;
+    border: .125rem solid;
+    border-radius: .625rem;
+    display: flex;
+    flex: 0 0 auto;
+    height: 1.25rem;
+    overflow: hidden;
+    padding-left: .375rem;
+    padding-right: .375rem;
+    width: 2.5rem;
+}
+.toogleSwitch::after{
+    background-color: currentColor;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: .5rem;
+    transition: transform .15s cubic-bezier(.5,0,.25,1);
+    width: .5rem;
+}
