@@ -10,17 +10,36 @@
 .userBanner{
   width: 100%;
 }
+.userPictureContainer{
+  
+  margin-left: 0;
+  width: 100%;
+
+
+}
 .user-img {
-  width: 50%;
-  max-width: 200px;
-  min-width: 100px;
-  height: auto;
+  width: 8%;
+/*   max-width: 200px;
+  min-width: 100px; */
+  height: 10%;
   border-radius: 50%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
+  top: -55px;
+}
+
+.userName{
+  padding-top: 1em;
+  width: 48%;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .userBodyContainer{
   color: aliceblue;
   width: 100%;
+  margin-bottom: 8em;
 }
 .userNavigation{
   width: 100%;

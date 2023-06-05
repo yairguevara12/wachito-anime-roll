@@ -16,7 +16,9 @@
     overflow: hidden;
     padding-left: .375rem;
     padding-right: .375rem;
+   
     width: 2.5rem;
+    margin-right: 2em;
 }
 .toogleSwitch::after{
     background-color: currentColor;
@@ -27,3 +29,51 @@
     transition: transform .15s cubic-bezier(.5,0,.25,1);
     width: .5rem;
 }
+.toogleSwitchContainer{
+    padding-top: 0.2em;
+  
+}
+.toogleSwitchTittle{
+  font-size: 1.1rem;
+  margin: 0;
+
+}
+.toogleSwitchDescription{
+    color: #8aa0a0;
+    font-size: 0.9rem;
+}
+/*changeEmail*/
+.email-container{
+    font-size: 1.2rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.email-input, .password-input{
+  border: none;
+  border-bottom: 0.0625em solid white;
+  background-color: #191a1e;
+  color: white;
+  padding-bottom: 0.625em;
+  padding-top: 0.625em;
+  width: 100%;
+  margin-bottom: 0.625em;
+  font-size: 1.2rem;
+  outline: none;
+}
+.btnEmail-disabled{
+    margin-top: 1.2em;
+    padding:0.7em;
+    background-color: #191a1e;
+    color:#696969;
+    border: #696969 solid 3px;
+    font-weight: 700;
+}
+.btnEmail{
+    margin-top: 1.2em;
+    padding:0.7em;
+    background-color: #ff9421;
+    color:#0b0b0b;
+    border: #ff9421 solid 3px;
+    font-weight: 700;
+}
+

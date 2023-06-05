@@ -4,6 +4,9 @@
 .grid {
   display: grid;
 }
+.gap{
+  gap: 1em;
+}
 .flex-direction {
   flex-direction: row;
 }
@@ -77,6 +80,7 @@
 .small-transparent {
   font-size: 0.8rem;
   color: rgb(150, 153, 155);
+  margin-bottom: 0.2em;
 }
 /* .select-basic{
     padding:  0.5em 1em;
@@ -143,4 +147,7 @@
 .custom-dropdown.open .dropdown-content {
   display: block;
   
+}
+.marginButton-1{
+  margin-bottom: 1em;
 }

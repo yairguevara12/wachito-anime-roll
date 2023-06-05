@@ -47,6 +47,7 @@ function App() {
         <Route exact path='/videos/popular/' element={<Videos />}></Route>
         <Route exact path='/videos/genero/:genre?' element={<Videos />}></Route>
         <Route exact path='/user'  element={<User />}></Route>
+        <Route exact path='/user/:option'  element={<User />}></Route>
         <Route exact path='/login' element={<Login />}></Route>
         <Route exact path='/register' element={<Register />}></Route>
       </Routes >

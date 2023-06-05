@@ -28,13 +28,28 @@ export default function Preference() {
 
 
                 <p className="bold-1-3" >Contenido</p>
-                <div>
-                    <div className="toogleSwitch flex">
-                       
+                <div className="flex ">
+                    <div className="toogleSwitchContainer">
+                        <div className="toogleSwitch ">
+
+                        </div>
                     </div>
-                    <div><p>Contenido para Adultos</p>
-                         <p>Al activar esta opción estás confirmando que
+                    <div>
+                        <p className="toogleSwitchTittle">Contenido para Adultos</p>
+                        <p className="toogleSwitchDescription">Al activar esta opción estás confirmando que
                             tienes 18 años o más.</p>
+                    </div>
+                </div>
+
+                <div className="flex ">
+                    <div className="toogleSwitchContainer">
+                        <div className="toogleSwitch ">
+
+                        </div>
+                    </div>
+                    <div>
+                        <p className="toogleSwitchTittle">Recoleccion de Datos</p>
+                        <p className="toogleSwitchDescription">Permitir que se haga uso de mis datos para mejorar la plataforma</p>
                     </div>
                 </div>
 

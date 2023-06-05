@@ -1,52 +1,47 @@
 .maiLogin {
- 
 }
-.errorLogin{
+.errorLogin {
   color: rgb(184, 35, 35);
   font-weight: 700;
 }
-.titleLogin{
-    color: aliceblue;
+.titleLogin {
+  color: aliceblue;
 }
-.loginContainer{
-    width: 1100px;
-    margin-top: 8em;
-    margin-bottom: 8em;
-    position: relative;
+.loginContainer {
+  width: 1100px;
+  margin-top: 8em;
+  margin-bottom: 8em;
+  position: relative;
 }
-.firstCharacterLogin{
+.firstCharacterLogin {
   width: 30%;
   position: absolute;
   right: 0;
- 
 }
-.firstCharacterRegister{
+.firstCharacterRegister {
   width: 35%;
   position: absolute;
   right: 0;
- 
 }
-.registerWarning{
+.registerWarning {
   color: rgb(172, 172, 172);
   text-align: left;
   width: 60%;
 }
-.secondCharacterLogin{
+.secondCharacterLogin {
   position: absolute;
   width: 12%;
   bottom: 0;
   left: 6%;
-
 }
-.mainForm{
-    background-color: #141519;
-/*     padding-left: 4em; */
-    width: 70%;
-    padding-bottom: 1em;
-    padding-top: 1em;
+.mainForm {
+  background-color: #141519;
+  /*     padding-left: 4em; */
+  width: 70%;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
-.FormFooter > p{
-  
+.FormFooter > p {
   color: aliceblue;
   padding-right: 0.5em;
   margin: 0;
