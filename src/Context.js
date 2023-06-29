@@ -3,7 +3,7 @@ const Context = React.createContext();
 
 function ContextProvider(props){
     return(
-        <Context.Provider value={"ga"}>
+        <Context.Provider value={"test"}>
             {props.children}
         </Context.Provider>
     )
