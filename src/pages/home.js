@@ -30,7 +30,7 @@ export default function Home() {
     React.useEffect(() => {
 
 
-        validateTokenInStorage();
+       /*  validateTokenInStorage(); */
         setTimeout(() => {
             setShowLoarder(false);
         }, 4000);

@@ -124,7 +124,7 @@ export default function Search(props) {
 
     }, [search]);
     React.useEffect(() => {
-        validateTokenInStorage();
+        /* validateTokenInStorage(); */
     }, []);
     React.useEffect(() => {
 

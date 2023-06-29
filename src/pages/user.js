@@ -23,7 +23,7 @@ export default function User() {
     const { validateTokenInStorage } = useToken();
 
     React.useEffect(() => {
-        validateTokenInStorage();
+       /*  validateTokenInStorage(); */
     }, []);
 
     function renderContent() {
